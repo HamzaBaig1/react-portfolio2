@@ -4,7 +4,7 @@ function About({ theme }) {
   const fontColor = theme === "dark" ? "text-white" : "text-black";
   return (
     <div name="about" className={`w-full h-screen  ${bgColor} text-white`}>
-      <div className=" p-4 w-full md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-2xl h-full lg:h-screen 2xl:h-screen mx-auto flex flex-col justify-center ">
+      <div className=" p-4 px-8 w-full md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl h-full lg:h-screen 2xl:h-screen mx-auto flex flex-col justify-center ">
         <div className="pb-4">
           <p
             className={` ${fontColor} text-4xl 2xl:text-7xl font-bold inline border-b-4 border-gray-500`}
@@ -13,7 +13,7 @@ function About({ theme }) {
           </p>
         </div>
         <p
-          className={`text-lg font-semibold md:text-xl 2xl:text-4xl 2xl:leading-10 md:mt-20 mt-10 ${fontColor}`}
+          className={`text-md font-semibold leading-relaxed md:text-xl 2xl:text-4xl  md:mt-20 mt-10 ${fontColor}`}
         >
           Hello there! I'm a front-end developer passionate about creating
           immersive digital experiences. With a strong foundation in HTML, CSS,

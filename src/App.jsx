@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Experience from "./components/Experience";

@@ -9,6 +9,8 @@ function Portfolio({ theme }) {
   const bgColor =
     theme === "dark" ? "bg-gradient-to-b from-black to-gray-800" : "bg-white";
   const fontColor = theme === "dark" ? "text-white" : "text-black";
+  const borderColor =
+    theme === "dark" ? "border-b-2 border-white" : "border-b-2";
 
   const portfolio = [
     {
@@ -66,7 +68,7 @@ function Portfolio({ theme }) {
       name="portfolio"
       className={`w-full h-full ${bgColor} ${fontColor} text-white md:h-full lg:py-72 2xl:h-full py-20`}
     >
-      <div className="  max-w-screen-lg 2xl:max-w-screen-2xl mx-auto p-4 flex flex-col justify-center lg:h-screen  w-full h-full ">
+      <div className="px-8  max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-4 flex flex-col justify-center lg:h-screen  w-full h-full ">
         <div className="mb-5">
           <p
             className={`${fontColor} text-4xl 2xl:text-7xl font-bold border-b-2 inline border-gray-500`}
@@ -94,14 +96,15 @@ function Portfolio({ theme }) {
                     {item.title}
                   </h1>
                 </div>
-                <div className="flex justify-center">
+                <div className="flex justify-center mt-2">
                   <button
-                    className={` ${fontColor} font-semibold w-1/2 px-6 py-2 m-2 2xl:text-xl hover:scale-105 duration-200`}
+                    className={` ${fontColor}  font-semibold w-1/2 px-6 py-2 m-2 2xl:text-xl hover:scale-105 duration-200`}
                   >
                     <a
                       href={item.demo}
                       target="_blank"
                       rel="noreferrer nooppener"
+                      className="border-2 border-cyan-950 rounded-md p-1 px-2"
                     >
                       Demo
                     </a>
@@ -109,7 +112,14 @@ function Portfolio({ theme }) {
                   <button
                     className={`w-1/2 px-6 my-4 2xl:text-xl hover:scale-105 duration-200 ${fontColor} font-semibold`}
                   >
-                    <a href={item.code}>Code</a>
+                    <a
+                      href={item.code}
+                      target="_blank"
+                      rel="noreferrer nooppener"
+                      className="border-2 border-cyan-950 rounded-md p-1 px-2"
+                    >
+                      Code
+                    </a>
                   </button>
                 </div>
               </div>

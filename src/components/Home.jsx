@@ -1,4 +1,4 @@
-import heroImage from "../assets/hamza.jpg";
+// import heroImage from "../assets/hamza.jpg";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { Link } from "react-scroll";
 
@@ -11,30 +11,32 @@ function Home({ theme }) {
   return (
     <div
       name="home"
-      className={`h-screen w-full ${bgColor} transition-all duration-150`}
+      className={`h-full w-full ${bgColor} transition-all duration-150 py-10`}
     >
-      <div className="flex flex-col  md:flex-row justify-center items-center h-full w-full md:max-w-screen-md lg:max-w-screen-lg 2xl:max-w-screen-2xl mx-auto px-5 ">
-        <div className="flex flex-col h-full w-full justify-center 2xl:h-1/2  2xl:mt-36  ">
+      <div className="flex flex-col  md:flex-row justify-center items-center h-full w-full md:max-w-screen-md lg:max-w-screen-lg  xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto px-8 ">
+        <div className="flex flex-col h-full w-full justify-center /*2xl:h-1/2*/ mt-32 xl:mt-52 lg:mt-42  2xl:mt-96 lg:items-center ">
           <h2
-            className={`${fontColor} text-4xl lg:text-7xl 2xl:text-8xl font-bold`}
+            className={`${fontColor}  text-3xl md:text-5xl lg:text-7xl 2xl:text-9xl font-bold mb-2`}
           >
             Hello, I'm Hamza
           </h2>
           <h4
-            className={`${fontColor} text-lg md:text-xl lg:text-3xl 2xl:text-4xl font-bold mt-2`}
+            className={`${fontColor} text-md md:text-xl lg:text-2xl 2xl:text-5xl 2xl:mt-5 font-bold mt-2`}
           >
             Front-end Web Developer
           </h4>
-          <p className="text-gray-500 max-w-lg 2xl:max-w-screen-md 2xl:text-3xl 2xl:leading-10 py-4 2xl:py-6 font-semibold">
-            Welcome to my corner of the web. As a front-end developer, I strive
-            to blend creativity with functionality to craft captivating digital
-            experiences. Dive into my portfolio and discover the fusion of
-            design and code that brings visions to life.
+          <p className="lg:text-center text-sm leading-relaxed  text-gray-500 max-w-xl lg-text-md 2xl:max-w-screen-lg 2xl:text-3xl  py-4 2xl:py-10 font-semibold">
+            Welcome to my corner of the web. I'm a frontend developer on a
+            mission to blend imagination with technology. Through pixels and
+            code, I sculpt immersive experiences that captivate and inspire.I
+            thrive on challenges that push the boundaries of innovation. Join me
+            on a journey where innovation meets creativity, and together, let's
+            shape the web of tomorrow.
           </p>
           <div>
             <Link to="portfolio" smooth duration={500}>
               <button
-                className={`group font-semibold ${fontColor} flex items-center w-fit px-6 py-3 2xl:py-6 my-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer 2xl:text-3xl`}
+                className={`group font-semibold text-white flex items-center w-fit px-4 text-sm py-3 2xl:py-6 my-2 rounded-md bg-gradient-to-r from-cyan-500 to-blue-500 cursor-pointer 2xl:text-3xl`}
               >
                 {/* <a href=""> Portfolio</a> */}
 
@@ -47,13 +49,13 @@ function Home({ theme }) {
             </Link>
           </div>
         </div>
-        <div className="2xl:w-1/2 2xl:h-1/2">
-          <img
-            src={heroImage}
-            alt=""
-            className=" hidden rounded-2xl mx-auto md:w-full md:flex "
-          />
-        </div>
+        {/* <div className="2xl:w-1/2 2xl:h-1/2">
+            <img
+              src={heroImage}
+              alt=""
+              className=" hidden rounded-2xl mx-auto md:w-full md:flex "
+            />
+          </div> */}
       </div>
     </div>
   );

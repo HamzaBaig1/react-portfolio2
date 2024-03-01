@@ -60,7 +60,7 @@ function Experience({ theme }) {
       name="experience"
       className={`pt-20 md:py-32 w-full md:h-full ${bgColor}`}
     >
-      <div className="max-w-screen-lg 2xl:max-w-screen-2xl mx-auto p-4 flex flex-col justify-center w-full  md:h-full lg:h-screen text-white ">
+      <div className="px-8 max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl mx-auto p-4 flex flex-col justify-center w-full  md:h-full lg:h-screen text-white ">
         <div className="pb-8">
           <p
             className={`${fontColor} text-4xl 2xl:text-7xl font-bold border-b-4 border-gray-500 p-2 inline`}

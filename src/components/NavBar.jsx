@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { Link } from "react-scroll";
-import { FaRegSun } from "react-icons/fa";
+import { GoSun } from "react-icons/go";
 import { FaRegMoon } from "react-icons/fa";
 
 function NavBar({ toggle, theme }) {
@@ -19,18 +19,18 @@ function NavBar({ toggle, theme }) {
   }
 
   return (
-    <div className=" fixed flex justify-between w-full h-20 2xl:h-32 px-4 bg-black text-white items-center">
+    <div className=" fixed flex justify-between w-full h-20 2xl:h-32 px-4 xl:px-16   bg-black text-white items-center">
       <div>
-        <h1 className="text-4xl md:text-5xl 2xl:text-7xl font-signature ">
+        <h1 className="text-4xl md:text-5xl 2xl:text-7xl font-signature  ">
           Hamza
         </h1>
       </div>
-      <ul className="hidden md:flex ">
+      <ul className="hidden md:flex md:-ml-4  ">
         {links.map((link) => {
           return (
             <li
               key={link.id}
-              className="cursor-pointer text-white px-4 capitalize font-medium 2xl:text-3xl hover:scale-105 duration-200"
+              className="cursor-pointer text-white px-5 md:px-3 lg:px-6 2xl:px-8 capitalize font-medium 2xl:text-3xl hover:scale-105 duration-200"
             >
               <Link to={link.link} smooth duration={500}>
                 {link.link}
@@ -38,10 +38,12 @@ function NavBar({ toggle, theme }) {
             </li>
           );
         })}
-        <button onClick={toggle} className="px-2">
-          {theme === "dark" ? <FaRegSun size={20} /> : <FaRegMoon size={20} />}
-        </button>
       </ul>
+      <div>
+        <button onClick={toggle} className="px-2 hidden md:flex">
+          {theme === "dark" ? <GoSun size={20} /> : <FaRegMoon size={20} />}
+        </button>
+      </div>
       {
         <div
           onClick={() => setShowNav((curr) => !curr)}
@@ -71,7 +73,7 @@ function NavBar({ toggle, theme }) {
             );
           })}
           <button className="text-4xl mt-4" onClick={toggleHandler}>
-            {theme === "dark" ? <FaRegSun /> : <FaRegMoon />}
+            {theme === "dark" ? <GoSun /> : <FaRegMoon />}
           </button>
         </ul>
       )}

@@ -11,7 +11,7 @@ function Contact({ theme }) {
 
   const disable = email.length === 0 || name.length === 0 ? true : false;
   const buttonStyle = disable
-    ? "bg-gray-800"
+    ? "bg-gradient-to-b from-cyan-500 to-blue-500"
     : "bg-gradient-to-b from-cyan-500 to-blue-500 hover:scale-110";
 
   function nameChangeHandler(e) {
@@ -38,13 +38,13 @@ function Contact({ theme }) {
       })
       .then(
         () => {
-          toast.success("Email sent successfully !");
+          toast.success("Message sent successfully !");
           setName("");
           setEmail("");
           setMsg("");
         },
         (error) => {
-          toast.error("Oops... Email not sent!");
+          toast.error("Oops... Message not sent!");
         }
       );
   };
@@ -53,7 +53,7 @@ function Contact({ theme }) {
       name="contact"
       className={`lg:pt-24 w-full h-full pt-20 p-4 ${fontColor} ${bgColor}`}
     >
-      <div className="flex flex-col p-4 max-w-screen-lg 2xl:max-w-screen-2xl justify-center mx-auto h-full lg:h-screen">
+      <div className="px-8 flex flex-col p-4 max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl justify-center mx-auto h-full lg:h-screen">
         <div className="pb-8">
           <p className="text-4xl 2xl:text-7xl font-bold inline border-b-4 border-gray-500">
             Contact
